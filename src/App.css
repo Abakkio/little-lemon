@@ -45,40 +45,52 @@ nav ul li a {
   padding: 16px;
 }
 
+.about {
+  background-color: #495E57;
+  padding: 16px;
+  margin-bottom: 150px;
+}
+
 .hero .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.hero-text {
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-text, .about-text {
   max-width: 400px;
 }
 
-.hero-text h1, .hero-text h2 {
+.hero-text h1, .hero-text h2, .about-text h1, .about-text h2 {
   margin: 0;
   line-height: 0.8;
 }
 
-.hero-text h1 {
+.hero-text h1, .about-text h1 {
   font-size: 64px;
   font-weight: 500;
   color: #F4CE14;
 }
 
-.hero-text h2 {
+.hero-text h2, .about-text h2 {
   font-size: 40px;
   font-weight: 400;
   color: white;
 }
 
-.hero-text p {
+.hero-text p, .about-text p {
   font-size: 18px;
   color: white;
   font-weight: 500;
 }
 
-.hero .hero-img-wrapper {
+.hero .hero-img-wrapper, .about .about-img-wrapper {
   margin-top: 10px;
   margin-bottom: -120px;
   width: 330px;
@@ -87,7 +99,38 @@ nav ul li a {
   overflow: hidden;
 }
 
-.hero-img {
+.hero-img, .about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story {
+  padding-top: 50px;
+}
+
+.story-text h2 {
+  font-size: 40px;
+  margin-top: 0;
+  text-align: start;
+}
+
+.story .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.story .story-img-wrapper {
+  width: 800px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.story-img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -281,6 +324,61 @@ footer a:hover {
   color: #F4CE14;
 }
 
+.reserve .container {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  align-items: flex-start;
+}
+
+.reserve-text {
+  width: 500px;
+}
+
+.reserve-text h2 {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.reserve-img-wrapper {
+  width: 800px;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.reserve-img {
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  display: block;
+  object-position: right;
+}
+
+.reserve-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reserve-form fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.reserve-form button {
+  align-self: center;
+  padding: 10px 30px;
+}
 
 @media (max-width: 768px) {
 
@@ -358,8 +456,8 @@ header .container {
 }
 
 .testimonial-header .testimonial-img {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   flex-shrink: 0;
   object-fit: fill;
   border-radius: 100px;
