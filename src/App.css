@@ -217,6 +217,19 @@ nav ul li a {
   font-weight: 700;
 }
 
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .testimonials {
   background-color:#F4CE14;
   padding: 50px;
@@ -238,6 +251,7 @@ nav ul li a {
   min-width: 0;
   border-radius: 16px;
   padding: 15px;
+  animation: aparecer 0.5s;
 }
 
 .testimonial-header {
