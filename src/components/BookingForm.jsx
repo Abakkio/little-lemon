@@ -1,16 +1,9 @@
 import { useState } from "react";
 
-const BookingForm = () => {
-    
+const BookingForm = ({availableTimes, dispatch}) => {
+
     const [date, setDate] = useState('');
     const [time, setTime] = useState('17:00');
-    const [availableTimes, setAvailableTimes] = useState([
-        '17:00',
-        '18:00',
-        '19:00',
-        '20:00',
-        '21:00',
-        '22:00'])
     const [guests, setGuests] = useState('1');
     const [occasion, setOccasion] = useState('birthday');
 
@@ -19,6 +12,14 @@ const BookingForm = () => {
     const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
     const [tel, setTel] = useState('');
+
+    const handleDateChange = (e) => {
+        setDate(e.target.value);
+        dispatch({
+            type: 'update_times',
+            date: e.target.value
+        });
+    };
 
     return(
         <section className='reserve-form'>
@@ -31,7 +32,7 @@ const BookingForm = () => {
                                 <label htmlFor='date'>Fecha</label>
                                 <input  type='date'
                                         value={date}
-                                        onChange={(e) => setDate(e.target.value)}
+                                        onChange={handleDateChange}
                                         id='date'
                                         name='date' />
                             </div>
