@@ -6,7 +6,7 @@ import { useReducer } from "react";
 
 
 
-function initializeTimes() {
+export function initializeTimes() {
     
     return(['17:00',
             '18:00',
@@ -16,7 +16,7 @@ function initializeTimes() {
             '22:00']);
 };
 
-function updateTimes(state, action) {
+export function updateTimes(state, action) {
     return state;
 };
 

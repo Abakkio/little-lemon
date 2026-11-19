@@ -4,7 +4,7 @@ const Nav = () => {
     return(
         <nav>
             <input type="checkbox" id="menu-toggle" className="menu-toggle" />
-            <label htmlFor="menu-toggle" className="menu-button">☰</label>
+            <label htmlFor="menu-toggle" className="menu-button" aria-label="Abrir menu">☰</label>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
