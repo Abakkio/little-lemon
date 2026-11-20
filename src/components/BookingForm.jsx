@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const BookingForm = ({availableTimes, dispatch}) => {
+const BookingForm = ({submitForm ,availableTimes, dispatch}) => {
 
     const [date, setDate] = useState('');
     const [time, setTime] = useState('17:00');
@@ -21,10 +21,15 @@ const BookingForm = ({availableTimes, dispatch}) => {
         });
     };
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        submitForm({date, time, guests, occasion, name, lastname, email, tel});
+    }
+
     return(
         <section className='reserve-form'>
                 <div className='container'>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <fieldset>
                             <legend>Tu reserva</legend>
 

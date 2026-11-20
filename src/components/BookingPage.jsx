@@ -1,7 +1,7 @@
 import BookingForm from './BookingForm';
 import restaurant from '../assets/restaurant.jpg'
 
-const BookingPage = ({availableTimes, dispatch}) => {
+const BookingPage = ({submitForm, availableTimes, dispatch}) => {
     return (
         <>
             <section className="reserve">
@@ -25,7 +25,7 @@ const BookingPage = ({availableTimes, dispatch}) => {
                 </div>
             </section>
 
-            <BookingForm availableTimes = {availableTimes} dispatch = {dispatch} />
+            <BookingForm  submitForm = {submitForm} availableTimes = {availableTimes} dispatch = {dispatch} />
         </>
     )
 };
